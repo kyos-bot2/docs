@@ -41,9 +41,7 @@
             "group": "Messages",
             "icon": "message",
             "pages": [
-              "configuration/messages/system",
-              "configuration/messages/responder",
-              "configuration/messages/timer"
+              "configuration/messages/responder"
             ]
           },
           "configuration/starboard",
