@@ -1,16 +1,19 @@
 ---
-title: Music
-description: "Listen to music from a variety of sources inside voice channels."
-icon: music
+title: "Music"
+description: "Listen to music within your voice channels."
+icon: "music"
 ---
 
-## Configuration
+**Configuration**
 
-### Setting the DJ role
+**Setting the music channel**
 
-You can set a DJ role which restricts who can control the music player.
+### [**​**](https://kyos-c60486ad.mintlify.app/server/music#setting-the-music-channel)
+
+You may set a **music only** channel which will restrict the music player commands to your desired text channel.
 
 <CodeGroup>
+
 ```javascript Syntax
 ,settings dj (role)
 ```
@@ -20,9 +23,11 @@ You can set a DJ role which restricts who can control the music player.
 ```
 
 </CodeGroup>
+
 <br />
+
 <Frame>
-    <img src="/images/miscellaneous/music/bind-dj.png" />
+  ![](/images/miscellaneous/music/bind-dj.png)
 </Frame>
 
 ### Auto play similar tracks
@@ -30,6 +35,7 @@ You can set a DJ role which restricts who can control the music player.
 You can toggle auto play which will automatically play similar tracks when the queue is empty.
 
 <CodeGroup>
+
 ```javascript Syntax
 ,settings autoplay (on or off)
 ```
@@ -39,9 +45,11 @@ You can toggle auto play which will automatically play similar tracks when the q
 ```
 
 </CodeGroup>
+
 <br />
+
 <Frame>
-    <img src="/images/miscellaneous/music/bind-autoplay.png" />
+  ![](/images/miscellaneous/music/bind-autoplay.png)
 </Frame>
 
 ## Queueing Music
@@ -49,11 +57,11 @@ You can toggle auto play which will automatically play similar tracks when the q
 You can queue music with the `play` command.
 
 <Tip>
-  By default, the `play` command will search **Deezer**. You're able to provide
-  a **URL** which will queue the music directly from the source you provide.
+  By default, the `play` command will search **Deezer**. You're able to provide a **URL** which will queue the music directly from the source you provide.
 </Tip>
 
 <CodeGroup>
+
 ```javascript Syntax
 ,play (query or URL)
 ```
@@ -69,19 +77,18 @@ You can queue music with the `play` command.
 
 ### Viewing the tracks in the queue
 
-Use the `queue` command to view the tracks in the queue.
-Each track has a corresponding position which can be used to interact with the queue.
+Use the `queue` command to view the tracks in the queue. Each track has a corresponding position which can be used to interact with the queue.
 
 <Frame>
-  <img src="/images/miscellaneous/music/queue.png" />
+  ![](/images/miscellaneous/music/queue.png)
 </Frame>
 
 ### Removing a track from the queue
 
-Use the `queue remove` command to remove a track from the queue.
-You must provide the [track position](#viewing-the-tracks-in-the-queue) which can be found with the `queue` command.
+Use the `queue remove` command to remove a track from the queue. You must provide the [track position](#viewing-the-tracks-in-the-queue) which can be found with the `queue` command.
 
 <CodeGroup>
+
 ```javascript Syntax
 ,queue remove (position)
 ```
@@ -91,17 +98,19 @@ You must provide the [track position](#viewing-the-tracks-in-the-queue) which ca
 ```
 
 </CodeGroup>
+
 <br />
+
 <Frame>
-    <img src="/images/miscellaneous/music/queue-remove.png" />
+  ![](/images/miscellaneous/music/queue-remove.png)
 </Frame>
 
 ### Moving a track in the queue
 
-Use the `queue move` command to move a track in the queue.
-You must provide the [current position](#viewing-the-tracks-in-the-queue) and the new position.
+Use the `queue move` command to move a track in the queue. You must provide the [current position](#viewing-the-tracks-in-the-queue) and the new position.
 
 <CodeGroup>
+
 ```javascript Syntax
 ,queue move (position) (new_position)
 ```
@@ -111,9 +120,11 @@ You must provide the [current position](#viewing-the-tracks-in-the-queue) and th
 ```
 
 </CodeGroup>
+
 <br />
+
 <Frame>
-    <img src="/images/miscellaneous/music/queue-move.png" />
+  ![](/images/miscellaneous/music/queue-move.png)
 </Frame>
 
 ## Controlling Playback
@@ -121,54 +132,69 @@ You must provide the [current position](#viewing-the-tracks-in-the-queue) and th
 You can control playback with the following commands
 
 <AccordionGroup>
-    <Accordion title="Skipping to the next track">
-        Use the `skip` command to skip to the next track.
-    </Accordion>
-    <Accordion title="Pausing & Resuming playback">
-        Use the `pause` & `resume` commands to pause and resume playback.
-    </Accordion>
-    <Accordion title="Seeking to a specific position">
-        Use the `seek` command to seek to a specific position in the track.
-        <Tip>
-            The position must use the format `mm:ss`, (e.g. `1:20`).
-        </Tip>
-        <CodeGroup>
-        ```javascript Syntax
-        ,seek (position)
-        ```
-        ```javascript Example
-        ,seek 2:30
-        ```
-        </CodeGroup>
-    </Accordion>
-    <Accordion title="Changing the track volume">
-        Use the `volume` command to change the volume.
-        <Tip>
-            The percentage must be between `0` and `100`.
-        </Tip>
-        <CodeGroup>
-        ```javascript Syntax
-        ,volume (percentage)
-        ```
-        ```javascript Example
-        ;volume 50
-        ```
-        </CodeGroup>
+  <Accordion title="Skipping to the next track">
+    Use the `skip` command to skip to the next track.
+  </Accordion>
 
-    </Accordion>
-    <Accordion title="Setting the repeat mode">
-        Use the `repeat` command to set the repeat mode.
-        <CodeGroup>
-        ```javascript Syntax
-        ,repeat (off | queue | current)
-        ```
-        ```javascript Example
-        ,repeat current
-        ```
-        </CodeGroup>
+  <Accordion title="Pausing & Resuming playback">
+    Use the `pause` & `resume` commands to pause and resume playback.
+  </Accordion>
 
-    </Accordion>
+  <Accordion title="Seeking to a specific position">
+    Use the `seek` command to seek to a specific position in the track.
 
+    <Tip>
+      The position must use the format `mm:ss`, (e.g. `1:20`).
+    </Tip>
+
+    <CodeGroup>
+
+    ```javascript Syntax
+    ,seek (position)
+    ```
+
+    ```javascript Example
+    ,seek 2:30
+    ```
+
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Changing the track volume">
+    Use the `volume` command to change the volume.
+
+    <Tip>
+      The percentage must be between `0` and `100`.
+    </Tip>
+
+    <CodeGroup>
+
+    ```javascript Syntax
+    ,volume (percentage)
+    ```
+
+    ```javascript Example
+    ;volume 50
+    ```
+
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Setting the repeat mode">
+    Use the `repeat` command to set the repeat mode.
+
+    <CodeGroup>
+
+    ```javascript Syntax
+    ,repeat (off | queue | current)
+    ```
+
+    ```javascript Example
+    ,repeat current
+    ```
+
+    </CodeGroup>
+  </Accordion>
 </AccordionGroup>
 
 ## Music Filters
@@ -179,19 +205,19 @@ You can use an equalizer preset to adjust how the audio sounds.
   You can view which presets are applied with the `preset active` command.
 </Info>
 
-| Command            | Description                                                                 |
-| ------------------ | --------------------------------------------------------------------------- |
-| `preset soft`      | Cuts high and mid frequencies, allowing only low frequencies                |
-| `preset 8d`        | Creates a stereo-like panning effect, rotating audio for immersive sound    |
-| `preset chipmunk`  | Accelerates track playback to produce a high-pitched, chipmunk-like sound   |
-| `preset boost`     | Enhances track with heightened bass and highs for a lively, energetic feel  |
-| `preset vaporwave` | Slows track playback for nostalgic and vintage half-speed effect            |
-| `preset vibrato`   | Introduces a wavering pitch effect for dynamic tone                         |
-| `preset piano`     | Enhances mid and high tones for standout piano-based tracks                 |
-| `preset metal`     | Amplifies midrange for a fuller, concert-like sound, ideal for metal tracks |
-| `preset flat`      | Represents a neutral EQ setting with default levels across the board        |
-| `preset karaoke`   | Filters out vocals from the track, leaving only the instrumental            |
-| `preset nightcore` | Accelerates track playback for nightcore-style music                        |
+| Command | Description |
+| --- | --- |
+| `preset soft` | Cuts high and mid frequencies, allowing only low frequencies |
+| `preset 8d` | Creates a stereo-like panning effect, rotating audio for immersive sound |
+| `preset chipmunk` | Accelerates track playback to produce a high-pitched, chipmunk-like sound |
+| `preset boost` | Enhances track with heightened bass and highs for a lively, energetic feel |
+| `preset vaporwave` | Slows track playback for nostalgic and vintage half-speed effect |
+| `preset vibrato` | Introduces a wavering pitch effect for dynamic tone |
+| `preset piano` | Enhances mid and high tones for standout piano-based tracks |
+| `preset metal` | Amplifies midrange for a fuller, concert-like sound, ideal for metal tracks |
+| `preset flat` | Represents a neutral EQ setting with default levels across the board |
+| `preset karaoke` | Filters out vocals from the track, leaving only the instrumental |
+| `preset nightcore` | Accelerates track playback for nightcore-style music |
 
 ## Music Sources
 
