@@ -1,0 +1,258 @@
+---
+title: "Donator Perks"
+description: "Gain access to exclusive rewards by donating to kyos"
+icon: "dollar-sign"
+---
+
+## How to get Donator Perks
+
+<Warning>
+  Click [here](https://discord.gg/4QrMPNKMBT) to purchase premium permanently, or vote [here](https://top.gg/bot/1065596802235109426/vote) to access premium commands for free
+</Warning>
+
+<Tabs>
+  <Tab title="Tier 3">
+    <Info>
+      **Tier 3** grants you 5 premium server activations, direct developer contact and your **own custom role** in the [**Support Server**](https://discord.gg/4QrMPNKMBT)
+    </Info>
+
+    <AccordionGroup>
+      <Accordion title="Personal Prefix">
+        Set your own custom command prefix to use **across kyos**
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,prefix self set (prefix)
+        ```
+
+        ```javascript Example
+        ,prefix self set k
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="Reaction Triggers">
+        Get kyos to autoreact to messages containing specific words
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,autoreact add (trigger), (emojis)
+        ,autoreact remove (trigger)
+        ,autoreact list
+        ```
+
+        ```javascript Example
+        ,autoreact add check, ✔️
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="Custom Invoke Responses">
+        Get custom responses to commands such as ban, kick, etc.
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,invoke hardban (message)
+        ,invoke kickdm (message)
+        ,invoke banmessage (message)
+        ,invoke bandm (message)
+        ,invoke kickmessage (message)
+        ,invoke warn (message)
+        ```
+
+        ```javascript Example
+        ,invoke bandm youve been banned from {guild.name}!
+        ```
+
+        </CodeGroup>
+      </Accordion>
+    </AccordionGroup>
+  </Tab>
+  <Tab title="Tier 2">
+    <Info>
+      **Tier 2** grants you 3 premium server activations
+    </Info>
+
+    <AccordionGroup>
+      <Accordion title="Last.FM Mode">
+        Customize your embed layout for the `nowplaying` command
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,lastfm mode set (embed script)
+        ,lastfm mode steal
+        ,lastfm mode view
+        ```
+
+        ```javascript Example
+        ,lastfm mode {embed}$v{title:Now Playing}$v{description: {track.name}}$v{thumbnail: {album.cover}}
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="Picture to GIF conversion">
+        Easily convert picture to a GIF
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,makegif (picture)
+        ```
+
+        ```javascript Example
+        ,makegif https://kyos.bot/icon.png 
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="Level Customisation">
+        Further customise your server’s levelling system with kyos
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,level message (message)
+        ,level multiplier (multiplier)
+        ,level reactions (on/off)
+        ```
+
+        ```javascript Example
+        ,level message {embed}$v{content: Congratulations {user.mention}, you've now **leveled up** to level `{new.level}`!}
+        ,level multiplier 3
+        ,level reactions on
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="Last.FM Custom Command">
+        Set your custom `nowplaying` command
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,lastfm customcommand (word)
+        ```
+
+        ```javascript Example
+        ,lastfm customcommand kapofm
+        ```
+
+        </CodeGroup>
+      </Accordion>
+    </AccordionGroup>
+  </Tab>
+  <Tab title="Tier 1">
+    <Info>
+      **Tier 1** grants you 1 premium server activation
+    </Info>
+
+    <AccordionGroup>
+      <Accordion title="Custom Jail Message">
+        Set your server’s jail message
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,settings jailmessage (message/embed code)
+        ```
+
+        ```javascript Example
+        ,settings jailmessage You have been jailed in {guild.name}.
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="Screenshot">
+        Screenshot a website
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,screenshot (site)
+        ```
+
+        ```javascript Example
+        ,screenshot https://kyos.bot
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="OCR">
+        Get the text from an image
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,opticalcharacterrecognition (image)
+        ```
+
+        ```javascript Example
+        ,opticalcharacterrecognition https://kyos.bot/icon.png
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="Custom Profile">
+        Create a custom profile across kyos
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,profile (create|delete|badges|code|view)
+        ```
+
+        ```javascript Example
+        ,profile create
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="Playlists">
+        Create a custom playlist with your favourite tunes
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,playlist (create|remove|list|play|add)
+        ```
+
+        ```javascript Example
+        ,playlist create myfavorites
+        ```
+
+        </CodeGroup>
+      </Accordion>
+
+      <Accordion title="Spotify Lookup">
+        Lookup your favourite music on Spotify
+
+        <CodeGroup>
+
+        ```javascript Syntax
+        ,spotifytrack (query)
+        ,spotifyalbum (query)
+        ```
+
+        ```javascript Example
+        ,spotifytrack after hours
+        ,spotifyalbum dawn fm
+        ```
+
+        </CodeGroup>
+      </Accordion>
+    </AccordionGroup>
+  </Tab>
+</Tabs>

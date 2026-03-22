@@ -1,0 +1,138 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Kyos",
+  "colors": {
+    "primary": "#658a95",
+    "light": "#95b6bd",
+    "dark": "#658a95"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": [
+          "overview/introduction",
+          "overview/donator-perks",
+          "overview/customization"
+        ]
+      },
+      {
+        "group": "Security Setup",
+        "pages": [
+          "security/antinuke",
+          "security/antiraid",
+          "security/moderation",
+          "security/fake-permissions"
+        ]
+      },
+      {
+        "group": "Server Configuration",
+        "pages": [
+          {
+            "group": "Roles",
+            "icon": "users-gear",
+            "pages": [
+              "configuration/roles/booster",
+              "configuration/roles/reaction",
+              "configuration/roles/button"
+            ]
+          },
+          {
+            "group": "Messages",
+            "icon": "message",
+            "pages": [
+              "configuration/messages/system",
+              "configuration/messages/responder",
+              "configuration/messages/timer"
+            ]
+          },
+          "configuration/starboard",
+          "configuration/voicemaster",
+          "configuration/level-rewards",
+          "configuration/bump-reminder",
+          "configuration/reaction-triggers",
+          "configuration/command-aliases",
+          "configuration/logging"
+        ]
+      },
+      {
+        "group": "Miscellaneous",
+        "pages": [
+          "miscellaneous/music",
+          "miscellaneous/giveaway"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          "integrations/lastfm"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "https://files.catbox.moe/quv3pk.png",
+    "dark": "https://files.catbox.moe/quv3pk.png"
+  },
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Vote",
+        "href": "/link https://top.gg/bot/1065596802235109426/vote"
+      },
+      {
+        "label": "Website",
+        "href": "/link https://kyosbot.xyz/"
+      },
+      {
+        "label": "Discord",
+        "href": "/link https://discord.gg/h3sUxstPJW"
+      },
+      {
+        "label": "Commands ",
+        "href": "/link https://kyosbot.xyz/commands"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Home",
+      "href": "https://kyos.bot"
+    }
+  },
+  "seo": {
+    "metatags": {
+      "theme-color": "#658a95",
+      "og:site_name": "kyos.bot"
+    },
+    "indexing": "navigable"
+  },
+  "footer": {
+    "socials": {
+      "discord": "https://discord.gg/kyos",
+      "github": "https://github.com/ju/docs"
+    }
+  },
+  "redirects": [
+    {
+      "source": "/commands",
+      "destination": "https://kyosbot.xyz/commands"
+    },
+    {
+      "source": "/status",
+      "destination": "https://kyosbot.xyz/status"
+    },
+    {
+      "source": "/invite",
+      "destination": "https://discord.com/oauth2/authorize?client_id=1065596802235109426"
+    },
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/h3sUxstPJW"
+    }
+  ]
+}
