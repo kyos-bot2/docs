@@ -1,64 +1,39 @@
 ---
 title: "Last.fm"
 description: "Share your music listening activity with your friends."
-icon: lastfm
+icon: "lastfm"
 ---
 
-## What is Last.fm?
+## **What is [Last.FM](http://Last.FM)?**
 
-Last.fm is a website which tracks the music you listen to and provides statistics based on your listening history. You can register for a Last.fm account by clicking [here](https://www.last.fm/join).
+Last.FM is a website which tracks the music you listen to and provides statistics based on your listening history. You can register for a [Last.FM](http://Last.FM) account by clicking [**here**](https://www.last.fm/join).
 
-## Creating a Last.fm account
+### \
+**Creating a [Last.FM](http://Last.FM) account**
 
 <Steps>
-  <Step title="Registration">
-    Visit the [Last.fm registration page](https://www.last.fm/join) and fill in
-    the required information.
+  <Step title="Register">
+    Go to the [**Last.FM**](http://Last.FM)**[ registration page](https://www.last.fm/join)** and fill in info.
   </Step>
   <Step title="Verification">
-    Verify your email address by clicking the link sent to your
-    [inbox](https://gmail.com/).
+    Verify your email address by clicking the link sent to your [inbox](https://gmail.com/).
+  </Step>
+  <Step title="Linking your Spotify">
+    To effectively track ur music, we suggest linking your [**Spotify**](https://spotify.com/) account view the **Applications** tab in your account settings
   </Step>
 </Steps>
 
-After creating your account, you'll likely want to connect your **Spotify account**
-to automatically scrobble your listening activity. You can do this by visiting the
-[Last.fm connections](https://www.last.fm/settings/applications) page and clicking
-the **Connect** button next to **Spotify Scrobbling**.
+## **Connecting your [Last.FM](http://Last.FM) account**
 
-<Frame>
-  <img src="/images/integrations/lastfm/spotify-scrobbling.png" />
-</Frame>
+Use the`lastfm login`command to set account, after this kyos will automatically recognise it as your account.
 
-## Connecting your Last.fm account
+## [**​**](https://kyos-c60486ad.mintlify.app/integrations/lastfm#known-issue)
 
-Use the `lastfm login` command, and follow the instructions sent in your direct messages.
+**Known Issue!**
 
-<Frame>
-  <img src="/images/integrations/lastfm/authentication.png" />
-</Frame>
-<Warning>
-  kyos will automatically cache your library, please be patient before using
-  any commands that rely on your library, as it may take a few seconds to fully
-  index your library.
-</Warning>
-<Info>
-  Your library will be automatically refreshed every **24 hours**. You can also
-  manually refresh your library early with the `lastfm refresh` command.
-</Info>
+### [**​**](https://kyos-c60486ad.mintlify.app/integrations/lastfm#last-fm-failure)
 
-## Known Issues
+[**Last.FM**](http://Last.FM)** Failure**If you see an unexpected error message (_or your nowplaying song is incorrect consistently_), it’s possible that**Last.FM**is currently down.
 
-### Out of Sync
-
-**Last.fm** and **Spotify** struggle to stay in sync, causing outdated information to be displayed.
-
-- Restart your **Spotify application** to force a refresh.
-- Disconnect and reconnect your **Spotify account** in the [Last.fm connections](https://www.last.fm/settings/applications).
-
-### Last.fm Failure
-
-If you see an unexpected error message, it's possible that **Last.fm** is currently down.
-
-- Check the [Last.fm status page](https://status.last.fm/) for more information.
-- If the issue persists, please join our [support server](/discord) for further assistance.
+- Check the [**Last.FM**](http://Last.FM)**[ status page](https://status.last.fm/)** for more information.
+- If the issue persists, please join our [**support server**](https://discord.gg/3yxqWDxagp) for further assistance.
