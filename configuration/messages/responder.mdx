@@ -1,144 +1,101 @@
 ---
 title: "Auto Responders"
-description: "Automatically respond to trigger messages."
-icon: reply
+description: "Automatically respond to trigger messages"
+icon: "reply"
 ---
 
-## Creating an auto responder
+<Info>
+  You may send an embed in your response message following the scripting guide [**here**](https://docs.kyosbot.xyz/resources/embeds)
+</Info>
 
-You can create an auto responder with the `autoresponder add` command.
+## Creating an Autoresponder
 
-<Warning>
-  The **trigger** and **response** must be separated by a comma (`,`).
-</Warning>
-<Tip>
-The `message` parameter can be raw text or an [embed](/resources/scripting) with dynamic [variables](/resources/scripting/variables).
-</Tip>
+<Note>
+  You **must** separate the **trigger** and the **response** with a `,`
+</Note>
+
 <CodeGroup>
 
 ```javascript Syntax
-,autoresponder add (trigger, response) [--flags]
+,autoresponder add (trigger), (response) (flags)
 ```
 
 ```javascript Example
-,autoresponder add welc, welcome to the server!
-,autoresponder add welc, {embed}$v{title: welcome}$v{description: welcome to the server!}
-```
-
-```javascript Example with flags
-,autoresponder add welc, welcome to the server! --self_destruct 10 --reply
-,autoresponder add ,welc, welcome to the server! --not_strict --ignore_command_check
+,autoresponder add documentation, https://docs.kyos.bot/ --reply --self_destruct 20 --not_strict
 ```
 
 </CodeGroup>
+
 <br />
+
 <Frame>
-    <img src="/images/configuration/messages/responder/add.png" />
+  ![Autoresponder Add](/images/Autoresponder-add.png)
 </Frame>
 
-### Available flags
+## Removing an autoresponder
 
-The following flags can be used to customize the response
+<Info>
+  This will delete the **given** autoresponder, to delete **all**, use `all` as the trigger argument
+</Info>
 
-<AccordionGroup>
-  <Accordion title="Not strict">
-    The `--not_strict` flag will search for the trigger anywhere in the message.
-    For example, if the trigger is `hello`, it will respond to `hello there`.
-  </Accordion>
-  <Accordion title="Self destruct">
-    The `--self_destruct` flag schedules the response for deletion after a
-    specified time, which must be between `6` and `60` seconds.
-  </Accordion>
-  <Accordion title="Delete trigger">
-    The `--delete` flag will delete the trigger message after the response is
-    sent.
-  </Accordion>
-  <Accordion title="Reply to trigger">
-    The `--reply` flag will reply to the trigger message.
-  </Accordion>
-  <Accordion title="Ignore command check">
-    The `--ignore_command_check` flag will allow the responder to trigger even
-    if it's a pre-existing command.
-  </Accordion>
-</AccordionGroup>
+You may remove an autoresponder with the autoresponder remove command
 
-## Removing an auto responder
-
-You can remove an auto responder with the `autoresponder remove` command.
-
-<Info>If you're struggling to remove an auto responder, refer to the [selection removal](/resources/syntax#removing-entries-via-id).</Info>
 <CodeGroup>
+
 ```javascript Syntax
 ,autoresponder remove (trigger)
 ```
 
 ```javascript Example
-,autoresponder remove welc
+,autoresponder remove documentation 
 ```
 
 </CodeGroup>
-<br />
+
 <Frame>
-    <img src="/images/configuration/messages/responder/remove.png" />
+  ![Screenshot2026 03 22214144](/images/Screenshot2026-03-22214144.png)
 </Frame>
 
-## Restricting auto responders
+## Viewing the autoresponders
 
-### Restricting to a channel or role
-
-Toggle exclusive access for an autoresponder to a role or channel with the `autoresponder exclusive` command
+To view the current autoresponders, you can use the autoresponder list command
 
 <CodeGroup>
-```javascript Syntax
-,autoresponder exclusive (role or channel) (trigger)
-```
 
-```javascript Example
-,autoresponder exclusive #general lifetime
+```javascript Syntax
+,autoresponder list 
 ```
 
 </CodeGroup>
-<br />
+
 <Frame>
-    <img src="/images/configuration/messages/responder/role3.png" />
+  ![Autoresponders List](/images/autoresponders-list.png)
 </Frame>
 
-## Auto Responder Roles
-Autoresponder roles are roles that are assigned or removed to members when they say a specific message.
+## Flags
 
-<Warning>It's easy to confuse these commands! Running the `add` command again would undo the functionality of giving members roles.</Warning>
-
-<CodeGroup>
-```javascript Syntax
-,autoresponder role (add or remove) (role) (trigger)
-```
-
-```javascript Example
-,autoresponder role add Verified Verify
-```
-</CodeGroup>
-<Frame>
-    <img src="/images/configuration/messages/responder/role2.png" />
-</Frame>
-
-### Removing an autoresponder role
-
-You can remove an autoresponder role by running the same command again. This action will reverse the previous configuration and remove the assignment or removals of the role
-
-## Related commands
+Flags can be added to your autoresponder to allow more customization.
 
 <AccordionGroup>
-    <Accordion title="Updating an auto responder">
-        You can use the `autoresponder update` command to update an auto responder.
-        <Info>This command uses the same syntax as the `autoresponder add` command.</Info>
-    </Accordion>
-    <Accordion title="Removing all auto responders">
-        You can use the `autoresponder reset` command to remove all auto responders.
-    </Accordion>
-    <Accordion title="Viewing all auto responders">
-        You can use the `autoresponder list` command to view all auto responders.
-    </Accordion>
+  <Accordion title="Not strict">
+    The `--not_strict` flag makes kyos respond to the trigger even if it does not match the trigger exactly.
+  </Accordion>
 
+  <Accordion title="Self destruct">
+    The `--self_destruct` flag makes kyos **delete** the response message after a specified number of seconds. Must be between `6s`-`40s`
+  </Accordion>
+
+  <Accordion title="Delete ">
+    The `--delete` flag makes kyos **delete** the trigger message.
+  </Accordion>
+
+  <Accordion title="Reply">
+    The `--reply` flag makes kyos **reply** to the trigger message.
+  </Accordion>
 </AccordionGroup>
 
+## **Miscellaneous**
 
+<Accordion title="Removing all autoresponders">
+  Execute `autoresponder clear`
+</Accordion>
