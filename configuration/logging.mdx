@@ -1,95 +1,61 @@
 ---
 title: "Logging"
-description: "Log events in your server."
-icon: gear
+description: "Get logged events for your server."
+icon: "gear"
 ---
 
 ## Overview
 
-Logging allows you to log events in your server. This can be useful for keeping track of what's happening in your server.
+The logging module allows you to log server events into designated channels. Perhaps useful for keeping informed on what’s happening inside your server.
+
+<Info>
+  **NOTE:** The available logging events are `mod`, `server`, `member`, and `all`
+</Info>
 
 ## Adding a logging event
 
-You can add a logging event using the `log add` command.
-
-<Info>
-  Available logging events are `messages`, `members`, `roles`, `channels`,
-  `invites`, `emojis` and `voice`.
-</Info>
-
-<Warning>
-  Do not delete the webhook that kyos creates in your logging channels!
-</Warning>
+Adding a logging event You can create a logging event using the logs set command.
 
 <CodeGroup>
 
 ```javascript Syntax
-,log add (channel) (event)
+,logs set (type) (channel)
 ```
 
 ```javascript Example
-,log add #logs messages
+,logs set member #logging
 ```
 
 </CodeGroup>
-<br />
+
 <Frame>
-    <img src="/images/configuration/logging/add.png" />
-</Frame>
-<br />
-<Frame>
-  <img src="/images/configuration/logging/example.png" />
+  ![Logs Add](/images/logs-add.png)
 </Frame>
 
 ## Removing a logging event
 
-You can remove a logging event using the `log remove` command.
+You can remove a logging event using the logs remove command.
 
 <CodeGroup>
 
 ```javascript Syntax
-,log remove (channel) (event)
+,logs remove (event)
 ```
 
 ```javascript Example
-,log remove #logs messages
+,logs remove member
 ```
 
 </CodeGroup>
+
 <br />
+
 <Frame>
-    <img src="/images/configuration/logging/remove.png" />
-</Frame>
-
-<Tip>
-  You can leave the event parameter empty to add or remove all logging events
-  from a channel.
-</Tip>
-
-## Ignoring a member or channel
-
-You can ignore and unignore a member or channel from being logged using the `log ignore` command.
-
-<CodeGroup>
-
-```javascript Syntax
-,log ignore (member or channel)
-```
-
-```javascript Example
-,log ignore @jonathan
-,log ignore #staff-chat
-```
-
-</CodeGroup>
-<br />
-<Frame>
-    <img src="/images/configuration/logging/ignore.png" />
+  ![Logs Remove](/images/logs-remove.png)
 </Frame>
 
 ## Related commands
 
 <Info>
-  You can use the `log ignore list` command to view all ignored members and
-  channels.
+  You can use the `logs config` to view all active log channels
 </Info>

@@ -45,7 +45,6 @@
           "configuration/voicemaster",
           "configuration/level-rewards",
           "configuration/bump-reminder",
-          "configuration/reaction-triggers",
           "configuration/command-aliases",
           "configuration/logging"
         ]
