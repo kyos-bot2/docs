@@ -69,7 +69,8 @@
       {
         "tab": "Resources",
         "pages": [
-          "variables"
+          "variables",
+          "errors"
         ]
       }
     ]
