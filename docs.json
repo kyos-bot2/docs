@@ -70,7 +70,8 @@
         "tab": "Resources",
         "pages": [
           "variables",
-          "errors"
+          "errors",
+          "embeds"
         ]
       }
     ]
