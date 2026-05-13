@@ -106,8 +106,7 @@
   },
   "footer": {
     "socials": {
-      "discord": "https://discord.gg/kyos",
-      "github": "https://github.com/ju/docs"
+      "discord": "https://discord.gg/kyos"
     }
   },
   "redirects": [
@@ -121,7 +120,7 @@
     },
     {
       "source": "/invite",
-      "destination": "https://discord.com/oauth2/authorize?client_id=1065596802235109426"
+      "destination": "https://discord.com/oauth2/authorize?client_id=1484276998921781348"
     },
     {
       "source": "/discord",
