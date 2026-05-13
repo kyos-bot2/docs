@@ -67,7 +67,10 @@
         ]
       },
       {
-        "tab": "Resources"
+        "tab": "Resources",
+        "pages": [
+          "variables"
+        ]
       }
     ]
   },

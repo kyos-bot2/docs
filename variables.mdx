@@ -1,0 +1,98 @@
+---
+title: "Variables"
+description: "Available variables for messages, moderation, LastFM, greetings, Twitch notifications, and leveling."
+---
+
+# Variables
+
+## Documentation Index
+
+Fetch the complete documentation index at:
+
+```txt
+https://docs.kyos.bot/llms.txt
+```
+
+Use this file to discover all available pages before exploring further.
+
+---
+
+## Message & Boost Message
+
+| Variable | Output |
+| --- | --- |
+| `\{user.mention\}` | Target’s mention |
+| `\{user.name\}` | Target’s name |
+| `\{user.avatar\}` | Target’s avatar |
+| `\{guild.name\}` | Server name |
+| `\{guild.icon\}` | Server icon |
+
+> The variables below can only be used in `hardban`, `bandm`, `banmsg`, `kickdm`, `kickmsg`, and `warn` for customizing punishment messages.
+
+| Variable | Output |
+| --- | --- |
+| `\{moderator.mention\}` | Responsible moderator mention |
+| `\{moderator.id\}` | Responsible moderator user ID |
+| `\{moderator.name\}` | Responsible moderator name |
+| `\{moderator.avatar\}` | Responsible moderator avatar |
+| `\{reason\}` | Moderation action reasoning |
+
+---
+
+## LastFM
+
+| Variable | Output |
+| --- | --- |
+| `\{track.name\}` | Song name |
+| `\{track.url\}` | Track URL |
+| `\{track.playcount\}` | Song playcount |
+| `\{track.image\}` | Track image |
+| `\{artist.url\}` | Artist URL |
+| `\{artist.name\}` | Artist name |
+| `\{album.playcount\}` | Album playcount |
+| `\{album.name\}` | Album name |
+| `\{album.url\}` | Album URL |
+| `\{album.cover\}` | Album cover |
+| `\{user.name\}` | User name |
+| `\{user.id\}` | User ID |
+| `\{user.avatar\}` | User avatar |
+
+---
+
+## Greeting
+
+| Variable | Output |
+| --- | --- |
+| `$(user.avatar)` | User avatar |
+| `$(user.name)` | User name |
+| `$(user.mention)` | User mention |
+| `$(user.joined_at)` | User join date |
+| `$(guild.name)` | Server name |
+| `$(guild.count)` | Server member count |
+| `$(guild.id)` | Server ID |
+| `$(guild.created_at)` | Server creation date |
+| `$(guild.boost_count)` | Server boost count |
+| `$(guild.icon)` | Server icon |
+
+---
+
+## Twitch Message
+
+| Variable | Output |
+| --- | --- |
+| `\{views\}` | View count |
+| `\{game\}` | Game name |
+| `\{title\}` | Stream title |
+| `\{link\}` | Stream link |
+
+---
+
+## Level Message
+
+| Variable | Output |
+| --- | --- |
+| `\{old.level\}` | Old level |
+| `\{new.level\}` | New level |
+
+---
+
