@@ -71,7 +71,8 @@
         "pages": [
           "variables",
           "errors",
-          "embeds"
+          "embeds",
+          "fake-permissions"
         ]
       }
     ]
