@@ -8,60 +8,67 @@
     "dark": "#658a95"
   },
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Overview",
-        "pages": [
-          "overview/introduction",
-          "overview/donator-perks"
-        ]
-      },
-      {
-        "group": "Security Setup",
-        "pages": [
-          "security/antinuke",
-          "security/antiraid",
-          "security/moderation",
-          "security/fake-permissions"
-        ]
-      },
-      {
-        "group": "Server Configuration",
-        "pages": [
+        "tab": "Documentation",
+        "groups": [
           {
-            "group": "Roles",
-            "icon": "users-gear",
+            "group": "Overview",
             "pages": [
-              "configuration/roles/reaction"
+              "overview/introduction",
+              "overview/donator-perks"
             ]
           },
           {
-            "group": "Messages",
-            "icon": "message",
+            "group": "Security Setup",
             "pages": [
-              "configuration/messages/responder"
+              "security/antinuke",
+              "security/antiraid",
+              "security/moderation",
+              "security/fake-permissions"
             ]
           },
-          "configuration/voicemaster",
-          "configuration/level-rewards",
-          "configuration/bump-reminder",
-          "configuration/command-aliases",
-          "configuration/logging"
+          {
+            "group": "Server Configuration",
+            "pages": [
+              {
+                "group": "Roles",
+                "icon": "users-gear",
+                "pages": [
+                  "configuration/roles/reaction"
+                ]
+              },
+              {
+                "group": "Messages",
+                "icon": "message",
+                "pages": [
+                  "configuration/messages/responder"
+                ]
+              },
+              "configuration/voicemaster",
+              "configuration/level-rewards",
+              "configuration/bump-reminder",
+              "configuration/command-aliases",
+              "configuration/logging"
+            ]
+          },
+          {
+            "group": "Miscellaneous",
+            "pages": [
+              "miscellaneous/giveaway"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/lastfm"
+            ]
+          }
         ]
       },
       {
-        "group": "Miscellaneous",
-        "pages": [
-          "miscellaneous/giveaway"
-        ]
-      },
-      {
-        "group": "Integrations",
-        "pages": [
-          "integrations/lastfm"
-        ]
-      },
-      ""
+        "tab": "Resources"
+      }
     ]
   },
   "logo": {
@@ -106,7 +113,8 @@
   },
   "footer": {
     "socials": {
-      "discord": "https://discord.gg/kyos"
+      "discord": "https://discord.gg/kyos",
+      "github": "https://github.com/ju/docs"
     }
   },
   "redirects": [
@@ -120,7 +128,7 @@
     },
     {
       "source": "/invite",
-      "destination": "https://discord.com/oauth2/authorize?client_id=1484276998921781348"
+      "destination": "https://discord.com/oauth2/authorize?client_id=1065596802235109426"
     },
     {
       "source": "/discord",
