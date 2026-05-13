@@ -8,7 +8,7 @@
     "dark": "#658a95"
   },
   "navigation": {
-    "groups": [
+    "pages": [
       {
         "group": "Overview",
         "pages": [
@@ -60,7 +60,8 @@
         "pages": [
           "integrations/lastfm"
         ]
-      }
+      },
+      ""
     ]
   },
   "logo": {
